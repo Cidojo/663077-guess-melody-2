@@ -3,12 +3,18 @@ import * as ReactDOM from 'react-dom';
 import {WelcomeScreen} from './components/welcome-screen/welcome-screen.jsx';
 
 const settings = {
-  welcomeMessage: `Hello React`
+  lives: 3,
+  timeLimit: 5
 };
 
-ReactDOM.render(
-    <WelcomeScreen
-      message={settings.welcomeMessage}
-    />,
-    document.getElementById(`root`)
-);
+const init = () => {
+  ReactDOM.render(
+      <WelcomeScreen
+        lives={settings.lives}
+        timeLimit={settings.timeLimit}
+      />,
+      document.getElementById(`root`)
+  );
+};
+
+init();
