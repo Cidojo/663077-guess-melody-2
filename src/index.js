@@ -12,6 +12,7 @@ const init = () => {
       <WelcomeScreen
         lives={settings.lives}
         timeLimit={settings.timeLimit}
+        onStartClick={() => {}}
       />,
       document.getElementById(`root`)
   );
