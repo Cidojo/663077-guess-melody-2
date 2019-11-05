@@ -7,7 +7,7 @@ it(`renders correctly`, () => {
     .create(<WelcomeScreen
       lives={0}
       timeLimit={0}
-      onStartClick={() => {}}
+      onStartButtonClick={() => {}}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();

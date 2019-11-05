@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 const WelcomeScreen = (props) => {
-  const {lives, timeLimit, onStartClick} = props;
+  const {lives, timeLimit, onStartButtonClick} = props;
 
   return (
     <section className="welcome">
@@ -11,7 +11,7 @@ const WelcomeScreen = (props) => {
       </div>
       <button
         className="welcome__button"
-        onClick={onStartClick}
+        onClick={onStartButtonClick}
       >
         <span className="visually-hidden">Начать игру</span>
       </button>
@@ -29,7 +29,7 @@ const WelcomeScreen = (props) => {
 WelcomeScreen.propTypes = {
   lives: PropTypes.number,
   timeLimit: PropTypes.number,
-  onStartClick: PropTypes.func
+  onStartButtonClick: PropTypes.func
 };
 
 export {WelcomeScreen};

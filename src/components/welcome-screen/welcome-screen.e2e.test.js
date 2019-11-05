@@ -5,16 +5,16 @@ import {WelcomeScreen} from './welcome-screen.jsx';
 
 configure({adapter: new Adapter()});
 
-it(`handles welcome button click`, () => {
-  const handleStartClick = jest.fn();
+it(`checks welcome button click`, () => {
+  const onStartButtonClick = jest.fn();
 
   const welcomeScreen = shallow(<WelcomeScreen
     lives={0}
     timeLimit={0}
-    onStartClick={handleStartClick}
+    onStartButtonClick={onStartButtonClick}
   />);
 
   const startButton = welcomeScreen.find(`.welcome__button`);
   startButton.simulate(`click`);
-  expect(handleStartClick).toHaveBeenCalledTimes(1);
+  expect(onStartButtonClick).toHaveBeenCalledTimes(1);
 });
